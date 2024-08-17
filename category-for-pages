@@ -1,0 +1,17 @@
+// Add this code to your active theme's functions.php file
+
+function add_categories_to_pages() {
+    // Register categories for the 'page' post type
+    register_taxonomy_for_object_type('category', 'page');
+}
+
+// Hook into WordPress 'init' action to run the function
+add_action('init', 'add_categories_to_pages');
+
+// Ensure that the post type supports categories
+function add_page_category_support() {
+    add_post_type_support('page', 'category');
+}
+
+// Hook into WordPress 'init' action to run the function
+add_action('init', 'add_page_category_support');
