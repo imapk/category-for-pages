@@ -1,4 +1,4 @@
-// Add this code to your active theme's functions.php file
+// Add this code to your active theme's functions.php file or you can also use it as a plugin.
 
 function add_categories_to_pages() {
     // Register categories for the 'page' post type
